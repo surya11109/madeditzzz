@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel | Mad Editzzz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/admin.css" />
+</head>
+<body class="admin-body">
+
+  <!-- ── LOGIN SCREEN ── -->
+  <div class="login-screen" id="loginScreen">
+    <div class="login-card">
+      <div class="login-logo">MAD<span>EDITZZZ</span></div>
+      <p class="login-sub">Admin Access</p>
+      <div class="login-form">
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="loginPassword" placeholder="Enter admin password" class="form-input" />
+        </div>
+        <button class="btn btn--primary" id="loginBtn">Login →</button>
+        <p class="login-error" id="loginError"></p>
+      </div>
+      <a href="/" class="login-back">← Back to site</a>
+    </div>
+  </div>
+
+  <!-- ── ADMIN DASHBOARD ── -->
+  <div class="admin-wrap" id="adminDashboard" style="display:none;">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar__logo">MAD<span>EDITZZZ</span></div>
+      <nav class="sidebar__nav">
+        <a href="#" class="sidebar__link active" data-panel="presets">
+          <span class="sidebar__icon">▦</span> Presets
+        </a>
+        <a href="#" class="sidebar__link" data-panel="add">
+          <span class="sidebar__icon">＋</span> Add Preset
+        </a>
+      </nav>
+      <button class="sidebar__logout" id="logoutBtn">Logout ↩</button>
+      <a href="/" class="sidebar__site">← View Site</a>
+    </aside>
+
+    <!-- Main content -->
+    <div class="admin-content">
+
+      <!-- Header -->
+      <div class="admin-header">
+        <h1 class="admin-title" id="panelTitle">Manage Presets</h1>
+        <button class="btn btn--sm" id="headerAddBtn">+ Add New</button>
+      </div>
+
+      <!-- Presets Panel -->
+      <div class="admin-panel active" id="panel-presets">
+        <div class="admin-grid" id="adminGrid">
+          <!-- Cards injected by JS -->
+        </div>
+      </div>
+
+      <!-- Add / Edit Panel -->
+      <div class="admin-panel" id="panel-add">
+        <div class="form-card">
+          <h2 class="form-card__title" id="formTitle">Add New Preset</h2>
+
+          <div class="form-group">
+            <label>Preset Name *</label>
+            <input type="text" id="fTitle" class="form-input" placeholder="e.g. Golden Hour Glow" />
+          </div>
+
+          <div class="form-group">
+            <label>Category</label>
+            <select id="fCategory" class="form-input form-select">
+              <option value="Portrait">Portrait</option>
+              <option value="Landscape">Landscape</option>
+              <option value="Cinematic">Cinematic</option>
+              <option value="Vintage">Vintage</option>
+              <option value="Moody">Moody</option>
+              <option value="Urban">Urban</option>
+              <option value="General">General</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Google Drive Download Link *</label>
+            <input type="url" id="fDriveLink" class="form-input" placeholder="https://drive.google.com/..." />
+          </div>
+
+          <div class="form-group">
+            <label>Preview Image</label>
+            <div class="image-upload-area" id="imageUploadArea">
+              <input type="file" id="fImageFile" accept="image/*" style="display:none;" />
+              <div class="image-upload-placeholder" id="uploadPlaceholder">
+                <span>📁</span>
+                <p>Click to upload image</p>
+                <small>JPG, PNG, WEBP — max 5MB</small>
+              </div>
+              <img id="imagePreview" src="" alt="" style="display:none;" class="image-upload-preview" />
+            </div>
+            <p class="form-divider">— or use an image URL —</p>
+            <input type="url" id="fImageUrl" class="form-input" placeholder="https://images.unsplash.com/..." />
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn--primary" id="savePresetBtn">Save Preset</button>
+            <button class="btn btn--ghost" id="cancelFormBtn">Cancel</button>
+          </div>
+
+          <input type="hidden" id="editingId" value="" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── DELETE CONFIRM MODAL ── -->
+  <div class="modal-overlay" id="deleteModal">
+    <div class="modal modal--sm">
+      <h3>Delete Preset?</h3>
+      <p>This action cannot be undone.</p>
+      <div class="modal-actions">
+        <button class="btn btn--danger" id="confirmDelete">Yes, Delete</button>
+        <button class="btn btn--ghost" id="cancelDelete">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TOAST ── -->
+  <div class="toast" id="toast">
+    <span class="toast__icon" id="toastIcon">✓</span>
+    <span class="toast__msg" id="toastMsg">Saved!</span>
+  </div>
+
+  <script src="/js/admin.js"></script>
+</body>
+</html>

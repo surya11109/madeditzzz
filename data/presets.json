@@ -1,0 +1,103 @@
+{
+  "presets": [
+    {
+      "id": "preset-03d71808",
+      "title": "preset 1",
+      "imageUrl": "https://drive.google.com/file/d/1gspvZTNtUw_MxI4UzcTfGXtv2G-XBea9/view?usp=drive_link",
+      "driveLink": "https://drive.google.com/file/d/1gspvZTNtUw_MxI4UzcTfGXtv2G-XBea9/view?usp=drive_link",
+      "category": "Portrait",
+      "downloads": 2,
+      "createdAt": "2026-03-28T08:52:37.314Z"
+    },
+    {
+      "id": "preset-001",
+      "title": "Golden Hour Glow",
+      "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80",
+      "driveLink": "https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view",
+      "category": "Landscape",
+      "downloads": 1240,
+      "createdAt": "2024-01-15T10:00:00Z"
+    },
+    {
+      "id": "preset-002",
+      "title": "Moody Cinematic",
+      "imageUrl": "https://images.unsplash.com/photo-1518791841217-8f162f1912da?w=600&q=80",
+      "driveLink": "https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view",
+      "category": "Portrait",
+      "downloads": 980,
+      "createdAt": "2024-01-18T10:00:00Z"
+    },
+    {
+      "id": "preset-003",
+      "title": "Neon Nights",
+      "imageUrl": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80",
+      "driveLink": "https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view",
+      "category": "Urban",
+      "downloads": 2100,
+      "createdAt": "2024-01-20T10:00:00Z"
+    },
+    {
+      "id": "preset-004",
+      "title": "Soft Matte Film",
+      "imageUrl": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80",
+      "driveLink": "https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view",
+      "category": "Portrait",
+      "downloads": 1560,
+      "createdAt": "2024-01-22T10:00:00Z"
+    },
+    {
+      "id": "preset-005",
+      "title": "Desert Bronze",
+      "imageUrl": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=80",
+      "driveLink": "https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view",
+      "category": "Landscape",
+      "downloads": 870,
+      "createdAt": "2024-01-25T10:00:00Z"
+    },
+    {
+      "id": "preset-006",
+      "title": "Teal & Orange",
+      "imageUrl": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80",
+      "driveLink": "https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view",
+      "category": "Cinematic",
+      "downloads": 3200,
+      "createdAt": "2024-01-28T10:00:00Z"
+    },
+    {
+      "id": "preset-007",
+      "title": "Faded Vintage",
+      "imageUrl": "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600&q=80",
+      "driveLink": "https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view",
+      "category": "Vintage",
+      "downloads": 1450,
+      "createdAt": "2024-02-01T10:00:00Z"
+    },
+    {
+      "id": "preset-008",
+      "title": "Arctic Blue",
+      "imageUrl": "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?w=600&q=80",
+      "driveLink": "https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view",
+      "category": "Landscape",
+      "downloads": 790,
+      "createdAt": "2024-02-05T10:00:00Z"
+    },
+    {
+      "id": "preset-009",
+      "title": "Skin Glow Pro",
+      "imageUrl": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&q=80",
+      "driveLink": "https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view",
+      "category": "Portrait",
+      "downloads": 4100,
+      "createdAt": "2024-02-08T10:00:00Z"
+    },
+    {
+      "id": "preset-010",
+      "title": "Dark Forest",
+      "imageUrl": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80",
+      "driveLink": "https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view",
+      "category": "Moody",
+      "downloads": 1830,
+      "createdAt": "2024-02-10T10:00:00Z"
+    }
+  ]
+}
