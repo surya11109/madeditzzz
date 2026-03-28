@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mad Editzzz – Download premium Lightroom & photo editing presets for free. Cinematic, portrait, landscape, and moody presets." />
+  <meta name="keywords" content="lightroom presets, photo editing, free presets, cinematic presets, portrait presets" />
+  <title>Mad Editzzz | Premium Photo Editing Presets</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <!-- ── LOADING SCREEN ── -->
+  <div id="loader" class="loader">
+    <div class="loader__inner">
+      <div class="loader__logo">MAD<span>EDITZZZ</span></div>
+      <div class="loader__bar"><div class="loader__bar-fill"></div></div>
+      <p class="loader__text">Loading presets...</p>
+    </div>
+  </div>
+
+  <!-- ── HEADER ── -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="/" class="logo">MAD<span>EDITZZZ</span></a>
+      <nav class="nav">
+        <a href="#presets" class="nav__link">Presets</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="/admin" class="nav__link nav__link--admin">Admin</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero__bg">
+      <div class="hero__grain"></div>
+      <div class="hero__orb hero__orb--1"></div>
+      <div class="hero__orb hero__orb--2"></div>
+      <div class="hero__orb hero__orb--3"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__tag">✦ Free to Download</p>
+      <h1 class="hero__title">EDIT LIKE<br /><em>A BEAST</em></h1>
+      <p class="hero__sub">Premium Lightroom & photo editing presets, crafted by creators — for creators. No login, no paywall.</p>
+      <a href="#presets" class="btn btn--hero">Browse Presets ↓</a>
+    </div>
+    <div class="hero__scroll">
+      <div class="hero__scroll-line"></div>
+      <span>SCROLL</span>
+    </div>
+  </section>
+
+  <!-- ── FILTER BAR ── -->
+  <section class="filters" id="presets">
+    <div class="container">
+      <div class="filters__inner">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="Portrait">Portrait</button>
+        <button class="filter-btn" data-filter="Landscape">Landscape</button>
+        <button class="filter-btn" data-filter="Cinematic">Cinematic</button>
+        <button class="filter-btn" data-filter="Vintage">Vintage</button>
+        <button class="filter-btn" data-filter="Moody">Moody</button>
+        <button class="filter-btn" data-filter="Urban">Urban</button>
+      </div>
+      <div class="filters__search">
+        <input type="text" id="searchInput" placeholder="Search presets..." class="search-input" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PRESETS GRID ── -->
+  <main class="main container" id="main">
+    <div class="grid" id="presetsGrid">
+      <!-- Cards injected by JS -->
+    </div>
+    <div class="empty-state" id="emptyState" style="display:none;">
+      <div class="empty-state__icon">🎨</div>
+      <p>No presets found. Try a different filter.</p>
+    </div>
+  </main>
+
+  <!-- ── ABOUT ── -->
+  <section class="about container" id="about">
+    <div class="about__inner">
+      <div class="about__text">
+        <h2 class="section-title">WHAT IS <span>MAD EDITZZZ?</span></h2>
+        <p>We're a community of photo editors sharing our best-kept secrets — the presets that make our shots pop. Every preset is handcrafted, tested on real photos, and free to download.</p>
+        <p>Works with Lightroom Mobile, Lightroom Classic, and compatible editors. Just download, import, and transform your photos in one click.</p>
+      </div>
+      <div class="about__stats">
+        <div class="stat"><span id="statPresets">10</span><label>Presets</label></div>
+        <div class="stat"><span id="statDownloads">0</span><label>Downloads</label></div>
+        <div class="stat"><span>Free</span><label>Forever</label></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__logo">MAD<span>EDITZZZ</span></div>
+      <p class="footer__copy">© 2024 Mad Editzzz. All presets are free to use.</p>
+    </div>
+  </footer>
+
+  <!-- ── DOWNLOAD MODAL ── -->
+  <div class="modal-overlay" id="downloadModal">
+    <div class="modal">
+      <button class="modal__close" id="modalClose">✕</button>
+      <div class="modal__icon">⬇</div>
+      <h3 class="modal__title" id="modalPresetName">Golden Hour Glow</h3>
+      <p class="modal__sub">Your download is being prepared...</p>
+
+      <!-- Countdown state -->
+      <div id="countdownState">
+        <div class="countdown-ring">
+          <svg class="countdown-svg" viewBox="0 0 100 100">
+            <circle class="countdown-bg" cx="50" cy="50" r="44" />
+            <circle class="countdown-progress" id="countdownCircle" cx="50" cy="50" r="44" />
+          </svg>
+          <span class="countdown-number" id="countdownNumber">30</span>
+        </div>
+        <p class="modal__info">Please wait <strong id="countdownText">30</strong> seconds</p>
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <!-- Ready state -->
+      <div id="readyState" style="display:none;">
+        <div class="ready-check">✓</div>
+        <p class="modal__ready">Your preset is ready!</p>
+        <a href="#" class="btn btn--download" id="downloadNowBtn" target="_blank" rel="noopener">
+          Download Now
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TOAST ── -->
+  <div class="toast" id="toast">
+    <span class="toast__icon">🎉</span>
+    <span class="toast__msg" id="toastMsg">Download ready!</span>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
